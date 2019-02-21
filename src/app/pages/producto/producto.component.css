@@ -1,0 +1,78 @@
+.dashboard {
+    padding: 20px 50px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "pti pti pti ... ... ... ... ... ... ... ... ..." "pib pib pib ... pdi pdi pdi pdi ... pay pay pay" "pis pis pis ... ... ... ... ... ... ... ... ...";
+}
+
+.product-title {
+    grid-area: pti;
+}
+
+.product-image-big {
+    grid-area: pib;
+}
+
+.product-image-big-size {
+    width: 250px;
+    height: auto;
+}
+
+.product-image-small {
+    grid-area: pis;
+}
+
+.product-image-small-size {
+    width: 50px;
+    height: auto;
+}
+
+.product-description {
+    grid-area: pdi;
+}
+
+.product-payment {
+    grid-area: pay;
+    border: 1px solid #dddddd;
+    flex-flow: column;
+    box-shadow: 5px 5px 5px #dddddd;
+}
+
+@media screen and (max-width: 680px) {
+    .dashboard {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-items: center;
+        justify-content: center;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: "... ... ... pti pti pti pti pti pti ... ... ..." "... ... ... pib pib pib pib pib pib ... ... ..." "... ... ... pis pis pis pis pis pis ... ... ..." "... ... ... pdi pdi pdi pdi pdi pdi ... ... ..." "... ... ... pay pay pay pay pay pay ... ... ...";
+    }
+    .d-variant {
+        margin-bottom: 20px;
+    }
+}
+
+.checked {
+    color: orange;
+}
+
+.rating {
+    font-size: 12px;
+}
+
+.d-variant{
+    background-color: #F48813;
+    color: white;
+}
+
+.d-variant:hover {
+    color: white;
+}
+
+.payment-option {
+    background-color: #F48813;
+    width: 75%;
+    margin: 20px 0px;
+}

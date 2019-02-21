@@ -1,0 +1,39 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+
+:root {
+    --body-background-color: #FFFF;
+    --bar-background-color: #F48813;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.cell-center {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    /*border: 1px solid black;*/
+}
+
+.cell-image {
+    height: auto;
+    width: 100%;
+}
+
+body {
+    background-color: var(--body-background-color);
+    height: 100vh;
+    justify-content: center;
+}
+
+.link-black a {
+    color: black;
+}
+
+.link-hover-orange a:hover, #active, .d-products:hover {
+    color: #F8A73B;
+}

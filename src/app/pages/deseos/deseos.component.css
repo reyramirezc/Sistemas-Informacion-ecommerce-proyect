@@ -1,0 +1,258 @@
+.dashboard {
+    grid-area: das;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-areas: "mat mat mat mat mat ... ... ... ... ... ... ..." "dme dme dme dme dme dme dme dme dme dme dme dme";
+    z-index: 1019;
+    margin: 30px;
+}
+
+.menu {
+    grid-area: dme;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "ite ite des des des pri qua qua tot act act ...";
+}
+
+.main-title {
+    grid-area: mat;
+    padding-bottom: 30px;
+}
+
+.item {
+    grid-area: ite;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "iti iti" "it1 it1" "it2 it2";
+}
+
+.item-title {
+    grid-area: iti;
+}
+
+.item1 {
+    grid-area: it1;
+}
+
+.item2 {
+    grid-area: it2;
+}
+
+.description {
+    grid-area: des;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "dti dti" "de1 de1" "de2 de2";
+}
+
+.description-title {
+    grid-area: dti;
+}
+
+.description1 {
+    grid-area: de1;
+}
+
+.description2 {
+    grid-area: de2;
+}
+
+.price {
+    grid-area: pri;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "pti pti" "pr1 pr1" "pr2 pr2";
+}
+
+.price-title {
+    grid-area: pti;
+}
+
+.price1 {
+    grid-area: pr1;
+}
+
+.price2 {
+    grid-area: pr2;
+}
+
+.quantity {
+    grid-area: qua;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "qti qti" "qu1 qu1" "qu2 qu2";
+}
+
+.quantity-title {
+    grid-area: qti;
+}
+
+.quantity1 {
+    grid-area: qu1;
+}
+
+.quantity2 {
+    grid-area: qu2;
+}
+
+.total {
+    grid-area: tot;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "tti tti" "to1 to1" "to2 to2";
+}
+
+.total-title {
+    grid-area: tti;
+}
+
+.total1 {
+    grid-area: to1;
+}
+
+.total2 {
+    grid-area: to2;
+}
+
+.action {
+    grid-area: act;
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "ati ati" "ac1 ac1" "ac2 ac2";
+}
+
+.action-title {
+    grid-area: ati;
+}
+
+.action1 {
+    grid-area: ac1;
+}
+
+.action2 {
+    grid-area: ac2;
+}
+
+.image-size {
+    width: 70%;
+    height: auto;
+}
+
+.remove-product {
+    border: 0;
+    padding: 4px 8px;
+    background-color: #F8A73B;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    display: none;
+}
+
+.remove-product:hover {
+    background-color: #F48813;
+}
+
+@media screen and (max-width: 680px) {
+    .dashboard {
+        grid-area: das;
+        grid-template-rows: auto auto;
+        grid-template-areas: "mat mat mat mat mat mat ... ... ... ... ... ..." "dme dme dme dme dme dme dme dme dme dme dme dme";
+    }
+    .menu {
+        grid-area: dme;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas: "ite ite ite des des des qua qua tot tot act act";
+    }
+    .price {
+        display: none;
+    }
+    .action-list {
+        display: none;
+    }
+    .remove-product {
+        display: block;
+    }
+    .image-size {
+        width: 100%;
+        height: auto;
+    }
+}
+
+input[type=number] {
+    width: 70%;
+    height: 33px;
+    padding-left: 8px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+}
+
+.action-list {
+    list-style-type: none;
+}
+
+.action-list li {
+    padding: 5px;
+}
+
+.parrafo, .parrafo:hover, .parrafo a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+#account {
+    font-size: 30px;
+}
+
+#account::after {
+    background-color: #F8A73B;
+    content: "";
+    width: 30px;
+    height: 1px;
+    display: block;
+    margin-top: 15px;
+}
+
+span, li {
+    font-size: 1em;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #F48813;
+    border: 2px solid #F48813;
+    color: #fff;
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.6s ease-in-out 0s;
+    -moz-transition: all 0.6s ease-in-out 0s;
+    -o-transition: all 0.6s ease-in-out 0s;
+    -ms-transition: all 0.6s ease-in-out 0s;
+    transition: all 0.6s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.other-option-btn {
+    font-size: 12px;
+    padding: 8px;
+    justify-items: center;
+    justify-content: center;
+}

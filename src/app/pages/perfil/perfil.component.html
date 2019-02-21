@@ -1,0 +1,64 @@
+<div class="dashboard">
+    <div class="user-profile-text">
+        <h2 id="account">USER PROFILE</h2>
+        <h3 class="legend">Change Personal Information</h3>
+    </div>
+
+    <form action="/action_page.php" autocomplete="on" method="POST" class="user-profile-form">
+
+        <div class="first-name">
+            <label for="firstName" class="required">First Name<em>*</em></label>
+            <input type="text" name="firstName" autofocus placeholder="First Name *" maxlength="255">
+        </div>
+
+        <div class="last-name">
+            <label for="lastName" class="required">Last Name<em>*</em></label>
+            <input type="text" name="lastName" placeholder="Last Name *" maxlength="255">
+        </div>
+
+        <div class="email-box">
+            <input type="email" name="email" placeholder="Email">
+        </div>
+
+        <div class="password">
+            <input type="password" name="password" placeholder="Password *" disabled>
+        </div>
+
+        <div class="c-password">
+            <input type="password" name="password" placeholder="Confirm Password *" disabled>
+        </div>
+
+        <div class="button-set">
+            <p class="required">* Required Fields</p>
+            <button type="submit" title="Submit" class="btn-primary">
+                <span>UPDATE</span>
+            </button>
+        </div>
+    </form>
+
+    <div class="other-option-text">
+        <p class="parrafo"><br></p>
+        <h2 id="account"><br></h2>
+        <h3 class="legend">Other Options</h3>
+    </div>
+
+    <div class="other-option">
+        <div class="shopping-history-btn">
+            <button type="submit" title="Submit" class="btn-primary other-option-btn">
+                <span>Shopping History</span>
+            </button>
+        </div>
+    
+        <div class="wish-list-btn">
+            <button routerLink="/deseos" type="submit" title="Submit" class="btn-primary other-option-btn">
+                <span>Go To Wish List</span>
+            </button>
+        </div>
+
+        <div class="address-book-btn">
+            <button type="submit" title="Submit" class="btn-primary other-option-btn">
+                <span>Manage Address Book</span>
+            </button>
+        </div>
+    </div>
+</div>

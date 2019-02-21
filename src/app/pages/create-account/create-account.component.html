@@ -1,0 +1,45 @@
+<div class="dashboard">
+    <div class="create-account-text">
+        <p class="parrafo"><a href="#!">Home</a> > Create Account</p>
+        <h2 id="account">CREATE AN ACCOUNT</h2>
+        <h3 class="legend">Personal Information</h3>
+    </div>
+
+    <form #formRegister="ngForm" (ngSubmit)="onAddUser()" action="/action_page.php" autocomplete="on" method="POST" class="create-account-form">
+        <!--div class="first-name">
+            <label for="firstName" class="required">First Name<em>*</em></label>
+            <input type="text" name="firstName" autofocus placeholder="First Name *" required maxlength="255">
+        </div-->
+
+        <!--div class="last-name">
+            <label for="lastName" class="required">Last Name<em>*</em></label>
+            <input type="text" name="lastName" placeholder="Last Name *" required maxlength="255">
+        </div-->
+
+        <div class="email-box">
+            <input type="email" [(ngModel)]="email" name="email" required placeholder="Email">
+        </div>
+
+        <div class="password">
+            <input type="password" [(ngModel)]="password" name="password" placeholder="Password *" required>
+        </div>
+
+        <!--div class="c-password">
+            <input type="password" name="password" placeholder="Confirm Password *" required>
+        </div-->
+
+        <!--div class="check-box">
+            <input type="checkbox" name="is_Subscribed" title="Sign Up For Newsletter" value="1" id="is_Subscribed"
+                checked="checked" class="checkbox">
+            <label for="is_Suscribed">Sign Up For Newsletter</label>
+        </div-->
+
+        <div class="button-set">
+            <p class="required">* Required Fields</p>
+            <p><a routerLink="/login"><small>«</small> Back</a></p>
+            <button type="submit" title="Submit" class="btn-primary">
+                <span>Submit</span>
+            </button>
+        </div>
+    </form>
+</div>

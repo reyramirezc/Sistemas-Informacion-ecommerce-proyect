@@ -1,0 +1,41 @@
+<div class="dashboard">
+    <div class="main-text">
+        <p class="parrafo"><a href="#!">Home</a> > Shipping Address</p>
+        <h2 id="transaction">STEP 1 - SHIPPING ADDRESS</h2>
+    </div>
+    <div class="address-form">
+        <h3 class="legend">SHIPPING INFORMATION</h3>
+        <p>Please enter the required information for shipment of your products</p>
+        <form action="/action_page.php" autocomplete="on" method="POST">
+            <label for="first-name" class="required">First name<em>*</em></label>
+            <input type="text" name="first-name" autofocus placeholder="First name" required maxlength="255">
+            <label for="middle-name" class="required">Middle name<em></em></label>
+            <input type="text" name="middle-name" placeholder="Middle name" required maxlength="255">
+            <label for="last-name" class="required">Last name<em>*</em></label>
+            <input type="text" name="last-name" autofocus placeholder="Last name" required maxlength="255">
+            <label for="address1" class="required">Address line 1<em>*</em></label>
+            <input type="text" name="address1" autofocus placeholder="Street address, company name" required maxlength="255">
+            <label for="address2" class="required">Address line 2<em></em></label>
+            <input type="text" name="address2" autofocus placeholder="Floor, apartment, PO Box" required maxlength="255">
+        </form>
+        
+    </div>
+    <div class="address2-form">
+        <p><br><br></p>
+        <form action="/action_page.php" autocomplete="on" method="POST">
+            <label for="city" class="required">City<em>*</em></label>
+            <input type="text" name="city" autofocus placeholder="City" required maxlength="255">
+            <label for="state" class="required">State<em>*</em></label>
+            <input type="text" name="state" autofocus placeholder="State" required maxlength="255">
+            <label for="zip" class="required">ZIP Code<em>*</em></label>
+            <input type="number" name="zip" autofocus placeholder="Ex: 1080" required maxlength="4">
+            <label for="phone" class="required">Phone number<em>*</em></label>
+            <input type="number" name="phone" autofocus placeholder="Ex: 0412-1112345" required maxlength="11">
+        </form>
+        <div>
+            <p class="required"><br>* Required Fields</p>
+            <p>or<a href="#"> select an address </a>from your address book.</p>
+        </div>    
+    </div>
+
+</div>

@@ -1,0 +1,69 @@
+<div class="dashboard cell-center">
+    <h3 class="big-title">SHOPPING CART</h3>
+    <div class="shopping-cart-menu">
+        <div class="shopping-cart-item">
+            <h6 class="item-title">Item</h6>
+            <img src="assets/img/producto1.jpg" alt="producto1" class="image-size item1">
+            <img src="assets/img/jugo.png" alt="producto2" class="image-size item2">
+        </div>
+        <div class="shopping-cart-description">
+            <h6 class="description-title">Description</h6>
+            <span class="description1">Mandarinas naturales</span>
+            <span class="description2">Jugo de Mandarina</span>
+        </div>
+        <div class="shopping-cart-price">
+            <h6 class="price-title">Price</h6>
+            <span class="price1">5$</span>
+            <span class="price2">10$</span>
+        </div>
+        <div class="shopping-cart-quantity">
+            <h6 class="quantity-title">QTY</h6>
+            <input type="number" name="quantity" min="1" max="10" value="1" class="quantity1">
+            <input type="number" name="quantity" min="1" max="10" value="1" class="quantity2">
+        </div>
+        <div class="shopping-cart-total">
+            <h6 class="total-title">Total</h6>
+            <span class="total1">10$</span>
+            <span class="total2">20$</span>
+        </div>
+        <div class="shopping-cart-action">
+            <h6 class="action-title">Action</h6>
+            <div class="action1">
+                <ul class="action-list">
+                    <li><button type="submit" title="Submit" class="btn-primary other-option-btn">
+                        <span>Save For Later</span>
+                    </button></li>
+                    <li><button type="submit" title="Submit" class="btn-primary other-option-btn">
+                        <span>Delete Item</span>
+                    </button></li>
+                </ul>
+                
+                <div class="product-removal cell-center">
+                    <button class="remove-product">
+                        Remove
+                    </button>
+                </div>
+            </div>
+            <div class="action2">
+                <ul class="action-list">
+                    <li><button type="submit" title="Submit" class="btn-primary other-option-btn">
+                        <span>Save For Later</span>
+                    </button></li>
+                    <li><button type="submit" title="Submit" class="btn-primary other-option-btn">
+                        <span>Delete Item</span>
+                    </button></li>
+                </ul>
+                <div class="product-removal cell-center">
+                    <button class="remove-product">
+                        Remove
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="go-pay-button">
+        <button routerLink="/envio" type="submit" title="Submit" class="btn-primary other-option-pay">
+            <span>Proceed to Payment</span>
+        </button>
+    </div>
+</div>

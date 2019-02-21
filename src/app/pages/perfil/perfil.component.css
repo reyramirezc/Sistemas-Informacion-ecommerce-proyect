@@ -1,0 +1,184 @@
+.dashboard {
+    grid-area: das;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 150px 420px;
+    grid-template-areas: "upt upt upt upt upt upt ... ott ott ott ott ott" "upf upf upf upf upf upf ... oto oto oto oto oto";
+    z-index: 1019;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.user-profile-text {
+    grid-area: upt;
+    margin-top: 1em;
+}
+
+.user-profile-form {
+    grid-area: upf;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: "fna fna fna fna fna fna lna lna lna lna lna lna" "emb emb emb emb emb emb emb emb emb emb emb emb" "psw psw psw psw psw psw cpw cpw cpw cpw cpw cpw" "btn btn btn ... ... ... ... ... ... ... ... ...";
+}
+
+.first-name {
+    grid-area: fna;
+    padding-right: 20px;
+}
+
+.last-name {
+    grid-area: lna;
+    padding-left: 10px;
+}
+
+.email-box {
+    grid-area: emb;
+}
+
+.password {
+    grid-area: psw;
+    padding-right: 20px;
+}
+
+.c-password {
+    grid-area: cpw;
+    padding-left: 20px;
+}
+
+.button-set {
+    grid-area: btn;
+}
+
+.other-option-text {
+    grid-area: ott;
+}
+
+.other-option {
+    grid-area: oto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "shb shb shb ... wlb wlb wlb ... abb abb abb ..."
+}
+
+.shopping-history-btn {
+    grid-area: shb;
+}
+
+.wish-list-btn {
+    grid-area: wlb;
+}
+
+.address-book-btn {
+    grid-area: abb;
+}
+
+.other-option-btn {
+    font-size: 14px;
+    padding: 10px;
+    justify-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 680px) {
+    .dashboard {
+        grid-area: das;
+        grid-template-rows: auto auto auto auto 20px;
+        grid-template-areas: 
+        "upt upt upt upt upt upt upt upt upt upt upt upt" 
+        "upf upf upf upf upf upf upf upf upf upf upf upf"
+        "ott ott ott ott ott ott ott ott ott ott ott ott"
+        "oto oto oto oto oto oto oto oto oto oto oto oto"
+        "... ... ... ... ... ... ... ... ... ... ... ...";
+    }
+    .user-profile-form {
+        grid-gap: 1em;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "fna fna fna fna fna fna fna fna fna fna fna fna" "lna lna lna lna lna lna lna lna lna lna lna lna" "emb emb emb emb emb emb emb emb emb emb emb emb" "psw psw psw psw psw psw psw psw psw psw psw psw" "cpw cpw cpw cpw cpw cpw cpw cpw cpw cpw cpw cpw" "btn btn btn btn btn btn btn btn btn btn btn btn"
+    }
+    .first-name, .last-name, .password, .c-password {
+        padding: 0;
+        margin: 0;
+    }
+    .middle-name {
+        display: none;
+    }
+    .check-box {
+        display: none;
+    }
+}
+
+
+.parrafo, .parrafo:hover, .parrafo a {
+    font-size: 13px;
+    color: black;
+    text-decoration: none;
+}
+
+#account {
+    font-size: 30px;
+}
+
+#account::after {
+    background-color: #F8A73B;
+    content: "";
+    width: 30px;
+    height: 1px;
+    display: block;
+    margin-top: 15px;
+}
+
+input[type=email], input[type="password"], input[type="text"] {
+    display: block;
+    width: 100%;
+    height: 33px;
+    padding: 6px 12px;
+    font-size: 12px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+    -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+
+input[type=email]:focus, input[type="password"]:focus, input[type="text"]:focus {
+    border-color: #F8A73B;
+    box-shadow: 0px 0px 4px #F8A73B;
+}
+
+.legend {
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 20px;
+}
+
+.required em {
+    color: red;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #F48813;
+    border: 2px solid #F48813;
+    color: #fff;
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.6s ease-in-out 0s;
+    -moz-transition: all 0.6s ease-in-out 0s;
+    -o-transition: all 0.6s ease-in-out 0s;
+    -ms-transition: all 0.6s ease-in-out 0s;
+    transition: all 0.6s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #F48813;
+    border: 2px solid #F48813;
+}

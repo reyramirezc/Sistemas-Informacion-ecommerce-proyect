@@ -1,0 +1,91 @@
+.dashboard {
+    grid-area: das;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto 30px auto 30px;
+    grid-template-areas: 
+    "mat mat mat mat mat mat mat mat mat mat mat mat" 
+    "... ... ... ... ... ... ... ... ... ... ... ..."
+    "pao pao pao pao pao ... ... pdo pdo pdo pdo pdo"
+    "... ... ... ... ... ... ... ... ... ... ... ...";
+    z-index: 1019;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.main-text {
+    grid-area: mat;
+}
+
+.paypal-option {
+    grid-area: pao
+}
+
+.pdf-option {
+    grid-area: pdo;
+}
+
+@media screen and (max-width: 680px) {
+    .dashboard {
+        grid-template-rows: auto 30px auto 30px auto 15px;
+        grid-template-areas: 
+        "mat mat mat mat mat mat mat mat mat mat mat mat" 
+        "... ... ... ... ... ... ... ... ... ... ... ..."
+        "pao pao pao pao pao pao pao pao pao pao pao pao" 
+        "... ... ... ... ... ... ... ... ... ... ... ..." 
+        "pdo pdo pdo pdo pdo pdo pdo pdo pdo pdo pdo pdo" 
+        "... ... ... ... ... ... ... ... ... ... ... ..."
+    }
+}
+
+.parrafo, .parrafo:hover, .parrafo a {
+    font-size: 13px;
+    color: white;
+    text-decoration: none;
+}
+
+#transaction {
+    font-size: 30px;
+}
+
+#transaction::after {
+    background-color: #F8A73B;
+    content: "";
+    width: 30px;
+    height: 1px;
+    display: block;
+    margin-top: 15px;
+}
+
+.legend {
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 20px;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: #F48813;
+    border: 2px solid #F48813;
+    color: #fff;
+    touch-action: manipulation;
+    cursor: pointer;
+    padding: 10px 12px;
+    text-transform: uppercase;
+    -webkit-transition: all 0.6s ease-in-out 0s;
+    -moz-transition: all 0.6s ease-in-out 0s;
+    -o-transition: all 0.6s ease-in-out 0s;
+    -ms-transition: all 0.6s ease-in-out 0s;
+    transition: all 0.6s ease-in-out 0s;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: white;
+    color: #F48813;
+    border: 2px solid #F48813;
+}
+
+.paypal-img {
+    width: 50%;
+    height: auto;
+}
