@@ -44,7 +44,7 @@ import { AdminComponent } from './pages/admin/admin.component';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [AngularFireAuth],
   bootstrap: [AppComponent]
