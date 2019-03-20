@@ -16,16 +16,16 @@ import { AuthGuard } from './services/auth.guard';
 const routes: Routes = [
   {path: '', component: SuperSecretComponent, canActivate: [AuthGuard]},
 
-  {path: 'home', component: HomeComponent},
-  {path: 'login', component: LoginComponent},
-  {path: 'createAccount', component: CreateAccountComponent},
-  {path: 'envio', component: EnvioComponent},
-  {path: 'pago', component: PagoComponent},
-  {path: 'carrito', component: CarritoComponent},
-  {path: 'deseos', component: DeseosComponent},
-  {path: 'perfil', component: PerfilComponent},
-  {path: 'producto', component: ProductoComponent},
-  {path: 'admin', component: AdminComponent},
+  {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  {path: 'createAccount', component: CreateAccountComponent, canActivate: [AuthGuard]},
+  {path: 'envio', component: EnvioComponent, canActivate: [AuthGuard]},
+  {path: 'pago', component: PagoComponent, canActivate: [AuthGuard]},
+  {path: 'carrito', component: CarritoComponent, canActivate: [AuthGuard]},
+  {path: 'deseos', component: DeseosComponent, canActivate: [AuthGuard]},
+  {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]},
+  {path: 'producto', component: ProductoComponent, canActivate: [AuthGuard]},
+  {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
