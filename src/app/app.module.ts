@@ -22,6 +22,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './pages/admin/admin.component';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
+import { SuperSecretComponent } from './super-secret/super-secret.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestor
     DeseosComponent,
     PerfilComponent,
     ProductoComponent,
-    AdminComponent
+    AdminComponent,
+    SuperSecretComponent
   ],
   imports: [
     BrowserModule,

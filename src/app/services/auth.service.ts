@@ -77,9 +77,8 @@ export class AuthService {
       uid: user.uid,
       email: user.email,
       displayName: user.displayName
+      //admin: false
     };
-
-    console.log(user.email);
 
     return userRef.set(data, {merge: true});
 
