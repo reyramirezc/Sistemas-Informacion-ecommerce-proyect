@@ -1,3 +1,4 @@
+import { SuperSecretComponent } from './super-secret/super-secret.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
@@ -10,9 +11,11 @@ import { DeseosComponent } from './pages/deseos/deseos.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent},
+  {path: '', component: SuperSecretComponent, canActivate: [AuthGuard]},
+
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'createAccount', component: CreateAccountComponent},
