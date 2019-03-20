@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(public afAuth: AngularFireAuth, private router: Router, private authService: AuthService) { }
+  constructor(public afAuth: AngularFireAuth, private router: Router, public authService: AuthService) { }
 
   public email: string ='';
   public password: string ='';
@@ -19,6 +19,7 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  /*
   onLogin(): void{
     this.authService.loginEmailUser(this.email, this.password).then((res)=>{
       this.router.navigate(['home']);
@@ -27,6 +28,6 @@ export class LoginComponent implements OnInit {
 
   onLogout(){
     this.authService.logoutUser();
-  }
+  }*/
 
 }

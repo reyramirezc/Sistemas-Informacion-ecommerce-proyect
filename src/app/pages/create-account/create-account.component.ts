@@ -13,14 +13,17 @@ export class CreateAccountComponent implements OnInit {
 
   public email: string ='';
   public password: string ='';
+  public displayName: string ='';
+  public lastName: string ='';
 
   ngOnInit() {
   }
 
+  /*
   onAddUser(){
     this.authService.registerUser(this.email, this.password).then((res)=>{
       this.router.navigate(['home']);
     }).catch(err => console.log('err', err.message));
-  }
+  }*/
 
 }

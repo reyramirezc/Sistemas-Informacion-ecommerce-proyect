@@ -8,12 +8,12 @@
     <form #formRegister="ngForm" (ngSubmit)="onAddUser()" action="/action_page.php" autocomplete="on" method="POST" class="create-account-form">
         <div class="first-name">
             <label for="firstName" class="required">First Name<em>*</em></label>
-            <input type="text" name="firstName" autofocus placeholder="First Name *" required maxlength="255">
+            <input type="text" name="firstName" [(ngModel)]="displayName" autofocus placeholder="First Name *" required maxlength="255">
         </div>
 
         <div class="last-name">
             <label for="lastName" class="required">Last Name<em>*</em></label>
-            <input type="text" name="lastName" placeholder="Last Name *" required maxlength="255">
+            <input type="text" name="lastName" [(ngModel)]="lastName" placeholder="Last Name *" required maxlength="255">
         </div>
 
         <div class="email-box">

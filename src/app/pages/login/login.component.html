@@ -20,7 +20,7 @@
                 <p><a href="#">Forgot your password?</a></p>
             </div>
         </form>
-        
+
     </div>
     <div class="create-account-form">
         <h3 class="legend">CREATE AN ACCOUNT</h3>
@@ -28,9 +28,20 @@
             faster, store
             multiple
             shipping addresses, view and track your orders in your account and more.</p>
-        <button routerLink="/createAccount" type="submit" title="Submit" class="btn-primary">
+
+            <div *ngIf="authService.user$ | async as user; else login">
+                {{ user | json}}
+                <hr>
+                <button class="btn-primary" (click)="authService.signOut()">Sign Out</button>
+            </div>
+
+            <ng-template #login>
+              <button class="btn-primary" (click)="authService.googleSignin()">Login with Google</button>
+            </ng-template>
+
+        <!-->button routerLink="/createAccount" type="submit" title="Submit" class="btn-primary">
             <span>CREATE AN ACCOUNT</span>
-        </button>
+        </button-->
     </div>
 
 </div>

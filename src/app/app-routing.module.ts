@@ -12,7 +12,7 @@ import { ProductoComponent } from './pages/producto/producto.component';
 import { AdminComponent } from './pages/admin/admin.component';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent},
+  {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
   {path: 'login', component: LoginComponent},
   {path: 'createAccount', component: CreateAccountComponent},
