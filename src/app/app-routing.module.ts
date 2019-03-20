@@ -14,7 +14,7 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  {path: '', component: SuperSecretComponent, canActivate: [AuthGuard]},
+  {path: '', component: LoginComponent, canActivate: [AuthGuard]},
 
   {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
   {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
