@@ -14,8 +14,8 @@
     <div class="pdf-option">
         <h3 class="legend">PURCHASE ORDER (PDF)</h3>
         <p>or you may generate a purchase order and download it as a .pdf file</p>
-        <button type="submit" title="Submit" class="btn-primary">
-            <span>GENERATE</span>
+        <button type ="button" (click)="downloadPDF()" type="submit" title="Submit" class="btn-primary">
+            <span>GENERATE PDF</span>
         </button>
         <form action="/action_page.php" autocomplete="on" method="POST">
             

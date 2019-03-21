@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewChecked } from '@angular/core';
+import * as jsPDF from 'jspdf';
 
 declare let paypal: any;
 
@@ -54,6 +55,22 @@ export class PagoComponent implements AfterViewChecked {
       scripttagElement.onload = resolve;
       document.body.appendChild(scripttagElement);
     })
+  }
+
+  downloadPDF() {
+    const doc = new jsPDF();
+    doc.text('La Mandarina C.A', 10, 10);
+    doc.text('Fecha: 21/03/2019', 10, 20);
+    doc.text('Cliente: ', 10, 30);
+    doc.text('FACTURA', 10, 50);
+    doc.text('Producto:', 10, 60);
+    doc.text('Precio:', 10, 80);
+    doc.text('Dirección de envio 1: ', 10, 100);
+    doc.text('Dirección de envio 2: ', 10, 110);
+    doc.text('Numero de telefono: ', 10, 120);
+    doc.text('Zip code: ', 10, 140);
+
+    doc.save('Text.pdf');
   }
 
 }
