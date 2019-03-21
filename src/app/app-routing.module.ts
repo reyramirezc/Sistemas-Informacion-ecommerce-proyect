@@ -14,10 +14,10 @@ import { AdminComponent } from './pages/admin/admin.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
-  {path: '', component: LoginComponent, canActivate: [AuthGuard]},
+  {path: '', component: LoginComponent},
 
   {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
-  {path: 'login', component: LoginComponent, canActivate: [AuthGuard]},
+  {path: 'login', component: LoginComponent},
   {path: 'createAccount', component: CreateAccountComponent, canActivate: [AuthGuard]},
   {path: 'envio', component: EnvioComponent, canActivate: [AuthGuard]},
   {path: 'pago', component: PagoComponent, canActivate: [AuthGuard]},
