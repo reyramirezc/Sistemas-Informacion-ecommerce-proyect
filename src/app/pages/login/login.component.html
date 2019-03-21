@@ -3,10 +3,10 @@
         <p class="parrafo"><a href="#!">Home</a> > Log In</p>
         <h2 id="account">LOGIN OR CREATE AN ACCOUNT</h2>
     </div>
-    <div class="login-form" (submit)="onLogin()">
+    <div class="login-form" >
         <h3 class="legend">MEMBER LOGIN</h3>
         <p>If you have an account with us, please log in.</p>
-        <form #formLogin="ngForm" (submit)="onLogin()" action="/action_page.php" autocomplete="on" method="POST">
+        <form #formLogin="ngForm" action="/action_page.php" autocomplete="on" method="POST">
             <label for="email" class="required">Email<em>*</em></label>
             <input [(ngModel)]="email" type="email" name="email" autofocus placeholder="Email *" required maxlength="255">
             <label for="password" class="required">Password<em>*</em></label>

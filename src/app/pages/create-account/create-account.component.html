@@ -5,7 +5,7 @@
         <h3 class="legend">Personal Information</h3>
     </div>
 
-    <form #formRegister="ngForm" (ngSubmit)="onAddUser()" action="/action_page.php" autocomplete="on" method="POST" class="create-account-form">
+    <form #formRegister="ngForm"  action="/action_page.php" autocomplete="on" method="POST" class="create-account-form">
         <div class="first-name">
             <label for="firstName" class="required">First Name<em>*</em></label>
             <input type="text" name="firstName" [(ngModel)]="displayName" autofocus placeholder="First Name *" required maxlength="255">
