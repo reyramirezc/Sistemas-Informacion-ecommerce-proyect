@@ -11,6 +11,8 @@ import { DeseosComponent } from './pages/deseos/deseos.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { ProductoComponent } from './pages/producto/producto.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import {CrearProductoComponent} from './pages/crear-producto/crear-producto.component';
+import {ListaProductoComponent} from './pages/lista-producto/lista-producto.component';
 import { AuthGuard } from './services/auth.guard';
 
 const routes: Routes = [
@@ -26,6 +28,8 @@ const routes: Routes = [
   {path: 'perfil', component: PerfilComponent, canActivate: [AuthGuard]},
   {path: 'producto', component: ProductoComponent, canActivate: [AuthGuard]},
   {path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+  {path: 'crearproducto', component: CrearProductoComponent, canActivate: [AuthGuard]},
+  {path: 'listaproducto', component: ListaProductoComponent, canActivate: [AuthGuard]},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

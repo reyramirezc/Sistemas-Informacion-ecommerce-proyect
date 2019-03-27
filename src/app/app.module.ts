@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -23,6 +24,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './pages/admin/admin.component';
 import { AngularFirestore, AngularFirestoreModule } from '@angular/fire/firestore';
 import { SuperSecretComponent } from './super-secret/super-secret.component';
+import { CrearProductoComponent } from './pages/crear-producto/crear-producto.component';
+import { ListaProductoComponent } from './pages/lista-producto/lista-producto.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +42,9 @@ import { SuperSecretComponent } from './super-secret/super-secret.component';
     PerfilComponent,
     ProductoComponent,
     AdminComponent,
-    SuperSecretComponent
+    SuperSecretComponent,
+    CrearProductoComponent,
+    ListaProductoComponent
   ],
   imports: [
     BrowserModule,
