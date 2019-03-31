@@ -18,6 +18,8 @@ export class CrearProductoComponent implements OnInit {
 
   addProduct(){
     if(this.product.name !== '' && this.product.description !== '' && this.product.price !== 0){
+      this.product.recomendado = false;
+      this.product.promocionado = false;
       this.productService.addProduct(this.product);
       this.product ={} as Product;
     }

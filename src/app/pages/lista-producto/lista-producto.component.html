@@ -4,8 +4,17 @@
           {{p.name}} <br/>
           {{p.description}} <br/>
           {{p.price}} <br/>
+          <a><img src="{{p.image}}"></a><br/>
+          <a><img src="{{p.image1}}"></a><br/>
+          <a><img src="{{p.image2}}"></a><br/>
           <button (click)="deleteProduct($event, p)">
             Delete
+          </button>
+          <button (click)="agregarRecomendado($event, p)">
+              Add Recommended
+          </button>
+          <button (click)="eliminarRecomendado($event, p)">
+              Delete Recommended
           </button>
           <button (click)="editProduct($event, p)">
             Edit
@@ -15,11 +24,28 @@
                   <input type="text" name="name" [(ngModel)]="editingProduct.name">
                   <input type="text" name="description" [(ngModel)]="editingProduct.description">
                   <input type="number" name="price" [(ngModel)]="editingProduct.price">   
+                  <input type="text" name="image" [(ngModel)]="editingProduct.image"> 
+                  <input type="text" name="image1" [(ngModel)]="editingProduct.image1"> 
+                  <input type="text" name="image2" [(ngModel)]="editingProduct.image2">
                   <button type="submit">
                     Update
                   </button>
               </form>
           </div>
+          <button (click)="promocionarProducto($event, p)">
+              Add to Promoted
+          </button>
+          <div *ngIf ="promocionar && promocionarProduct.id == p.id">
+            <form (ngSubmit)= "actualizarPromocionado()">
+                <input type="number" name="price" [(ngModel)]="promocionarProduct.price"> 
+                <button type="submit">
+                    Add to promoted
+                  </button>
+            </form>
+          </div>
+          <button (click)="eliminarPromocionado($event, p)">
+              Delete to Promoted
+          </button>
         </li>
       </ul>
 </div>
