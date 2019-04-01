@@ -19,6 +19,15 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  loginGoogle(){
+    this.authService.googleSignin()
+    .then( res => {
+      console.log(res)
+    })
+    .catch( err => {console.log(err)
+    })
+  }
+
   /*
   onLogin(): void{
     this.authService.loginEmailUser(this.email, this.password).then((res)=>{

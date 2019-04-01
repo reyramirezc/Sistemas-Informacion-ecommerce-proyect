@@ -59,8 +59,20 @@ export class AuthService {
 
   async googleSignin(){
     const provider = new auth.GoogleAuthProvider();
-    const credential = await this.afsAuth.auth.signInWithPopup(provider);
-    return this.updateUserData(credential.user);
+    return this.afsAuth.auth.signInWithPopup(provider).then( (data) => {
+      console.log(data);
+      this.afs.collection('/users').doc(data.user.uid).get().subscribe(docSnapshot => {
+        if (docSnapshot.exists) {
+          alert("Welcome" + data.user.displayName );
+        }else{
+          return this.updateUserData(data.user);
+        }
+      });
+
+      // if ( this.afs.collection('/users').doc(data.user.uid) ){
+      // }else{
+      // }
+    });
   }
 
   async signOut(){
@@ -68,7 +80,7 @@ export class AuthService {
     return this.router.navigate(['/']);
   }
 
-  private updateUserData(user) {
+  private updateUserData(user , isAdmin ? : boolean) {
     //Set user data to firestore on login
 
     const userRef: AngularFirestoreDocument<User> = this.afs.doc(`users/${user.uid}`);
@@ -76,8 +88,8 @@ export class AuthService {
     const data = {
       uid: user.uid,
       email: user.email,
-      displayName: user.displayName
-      //admin: false
+      displayName: user.displayName || "Sin Nombre",
+      admin: isAdmin || false
     };
 
     return userRef.set(data, {merge: true});
